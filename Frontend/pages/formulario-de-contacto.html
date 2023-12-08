@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>RePlantear</title>
+
+        <link rel="stylesheet" href="../css/styles.css">
+
+    </head>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Nanum+Gothic&display=swap');
+       
+      
+                .h2consejos{
+                font-family: 'Julius Sans One', sans-serif;
+                font-size: 40px;
+                text-align: center;
+                margin: 5rem;
+                margin-right: 5rem;
+                padding-top: 6rem;}
+           
+    </style>
+
+
+    <header class="header">
+        <!--cambie el header -->
+        <div class="logo"><!--acá colocamos la img dentro de una etiqueta <a> para convertirla en un enlace -->
+            <li><a href="index.html"><img src="../img/logo1.png" alt="LOGO"></a> </li>
+        </div>
+        <nav>
+            <ul class="navegacion">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="formulario-de-contacto.html">Contacto</a></li>
+                <li><a href="nosotras.html">Nosotras</a></li>
+                <li><a href="tips.html">Tips comunidad</a></li>
+            </ul>
+        </nav>
+        </header>
+    
+
+    <body>
+    <main>
+                   <div class="formulario">
+                <h2 class="h2consejos">Formulario de Contacto</h2>
+                <div>                   
+                        <form action="sofiapizzamus@gmail.com">
+                            <div class="row">
+                                <div class="col-25">  
+                                    <label for="inputNombre">Nombre:</label>
+                                    <br>
+                                </div>
+
+                                <div class="col-75">
+                                    <input type="text" id="inputNombre" required>
+                                </div>
+                                    <br>
+                            </div>
+
+                            <div class="row">  
+                                <div class="col-25">
+                                    <label for="inputApellido">Apellido:</label>
+                                    <br>
+                                </div> 
+                                <div class="col-75">
+                                    <input type="text" id="inputApellido" required>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row">  
+                                <div class="col-25">
+                                    <label for="inputMail">Correo electrónico:</label>
+                                    <br>
+                                </div> 
+                                <div class="col-75">
+                                    <input type="text" id="inputMail" required>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                
+                                 <div class="col-25">
+                                    <label for="textAreaMensaje">Escribe tu mensaje aquí</label>
+                                    <br>
+                                </div>
+                                <div class="col-75">
+                                    <textarea name="textAreaMensaje" id="" cols="30" rows="10"></textarea>
+                                    <br>
+                                </div>
+                                <div class="row">
+                                    <input type="submit" value="Enviar comentarios.." required>
+                                    <input type="reset" value="Borrar todo..">
+                                </div>
+                                </form>
+                    </div>
+                   
+                </div>                    
+    </main>
+
+    <section id="consejo">
+        <h2 class="h2consejos"> Algunos consejos para ti...</h2>
+        <div class="conteiner_negro">
+            <div class="cajita">
+                <h3>Conoce a tus plantas</h3><br>
+                <p>Cada planta es única. Antes de comprar o cuidar una planta, investiga sus necesidades específicas de luz, agua y temperatura. Escucha las experiencias de otros jardineros y aprende de sus éxitos y errores..</p>
+            </div>
+
+            <div class="cajita">
+                <h3>No temas podar</h3><br>
+                <p>La poda regular puede ser beneficiosa para muchas plantas. Escucha las historias de aquellos que han tenido éxito al podar sus plantas para promover un crecimiento saludable y evitar enfermedades.</p>   
+            </div>     
+
+            <div class="cajita">
+                <h3>Controla las plagas</h3><br>
+                <p>Las plagas pueden ser un problema común en las plantas. Escucha las recomendaciones de otros jardineros sobre cómo identificar y tratar plagas de manera efectiva.</p>   
+            </div>
+            
+        </div>
+        <!--acá no va un </section>??-->
+        <section id="consejo">
+            <div class="conteiner_negro">
+
+                <div class="cajita">
+                    <h3>Utiliza fertilizantes con moderación</h3><br>
+                    <p>El exceso de fertilizante puede dañar las plantas. Aprende de las experiencias de personas que han encontrado el equilibrio adecuado entre alimentar sus plantas y evitar la sobrealimentación.</p>   
+                </div>
+
+                <div class="cajita">
+                    <h3>Aprende a regar correctamente</h3><br>
+                    <p>El riego es una de las áreas más críticas del cuidado de las plantas. Escucha consejos sobre cómo regar según las necesidades de cada planta y cómo evitar el riego excesivo o insuficiente.</p>   
+                </div>
+
+                <div class="cajita">
+                    <h3>Elige macetas adecuadas</h3><br>
+                    <p>Las macetas y contenedores incorrectos pueden afectar negativamente el crecimiento de las plantas. Aprende de las experiencias de quienes han seleccionado macetas que permiten un buen drenaje y espacio para el crecimiento de las raíces.</p>   
+                </div>
+            </div>    
+        </div>
+        </section>
+
+        <section id="iFrame">
+            <p class="descripcion">Te dejamos unos consejos del Dr. Matta respecto al cuidado general de las plantas de interior...</p>
+            <iframe src="https://www.youtube.com/embed/gCrWENmRa-s" width="100%" height="300" style="border:none;">
+            </iframe>
+            
+        </section>
+       <!-- <div class="encabezadoTips">
+                    
+            <h2 class="h2consejos">Te damos algunos consejos</h2>
+
+                <p class="parrafo-consejos"> <br>
+                    <b>Conoce a tus plantas:</b> Cada planta es única. Antes de comprar o cuidar una planta, investiga sus necesidades específicas de luz, agua y temperatura. Escucha las experiencias de otros jardineros y aprende de sus éxitos y errores.
+                    <br> <br>
+                    <b>No temas podar:</b> La poda regular puede ser beneficiosa para muchas plantas. Escucha las historias de aquellos que han tenido éxito al podar sus plantas para promover un crecimiento saludable y evitar enfermedades.
+                    <br> <br>
+                    <b>Controla las plagas:</b> Las plagas pueden ser un problema común en las plantas. Escucha las recomendaciones de otros jardineros sobre cómo identificar y tratar plagas de manera efectiva.
+                    <br> <br>
+                    <b>Utiliza fertilizantes con moderación:</b> El exceso de fertilizante puede dañar las plantas. Aprende de las experiencias de personas que han encontrado el equilibrio adecuado entre alimentar sus plantas y evitar la sobrealimentación.
+                    <br> <br>
+                    <b>Aprende a regar correctamente:</b> El riego es una de las áreas más críticas del cuidado de las plantas. Escucha consejos sobre cómo regar según las necesidades de cada planta y cómo evitar el riego excesivo o insuficiente.
+                    <br> <br>
+                    <b>Elige macetas adecuadas:</b> Las macetas y contenedores incorrectos pueden afectar negativamente el crecimiento de las plantas. Aprende de las experiencias de quienes han seleccionado macetas que permiten un buen drenaje y espacio para el crecimiento de las raíces.
+                </p>
+        </div>-->
+
+        <footer class="footer"> <!--este es el footer-->
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <p class="footer"> &copy; Todos los derechos reservados 2023<br>
+            Programado por Josefina Moreno, Carina Rodrigues y Sofia Pizzamus</p>
+      </footer>
+
+       
+    </body>
+
+ </html>
+
