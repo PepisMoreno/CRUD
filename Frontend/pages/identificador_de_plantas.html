@@ -27,13 +27,15 @@
       </nav></header>
     </header>
     <main>
+        
         <div id="app" class="container">
             <h1>Plantas</h1>
             <br>
             <a  class="btn btn-primary" href="planta_nueva.html">Nuevo</a>
             <br><br>
+   
             <div v-if="error">
-                <p>Lo sentimos , ........</p>
+                <p>Lo sentimos , No hay nada que mostrar aquí.</p>
         </div>
         <div v-else>
             <section v-if="cargando">
@@ -57,7 +59,7 @@
                                 <td scope="row">{{planta.id}}</td>
                                 <td>{{planta.nombreComun}}</td>
                                 <td>{{planta.nombreCientif}}</td>
-                                <td><img width="60" :src="planta.imagen" :alt="planta.nombre">
+                                <td><img width="150" :src="planta.imagen" :alt="planta.nombre">
                                 </td>
                                 <td>
                                     <a class="btn btn-primary" :href="'planta_editar.html?id='+ planta.id">Editar</a>
