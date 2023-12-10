@@ -6,6 +6,58 @@
     padding: 0;
     box-sizing: border-box;
 }
+.busco{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    background: #274427;
+    line-height: 80px;
+    border-radius:50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.busco i{
+    font-size: 25px;
+    color: #D4A373;
+    line-height: 80px;
+    transition:  all 0.7 ease;
+}
+.SP{
+    position: absolute;
+    left: 80%;
+    top: 15%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+}
+input {
+    outline: none;
+    box-sizing: border-box;
+    height: 60px;
+    width: 0;
+    padding: 0 20px;
+    color: #438043;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 1px solid #c0f6f6;
+    transition: all 0.7s ease;
+}
+::placeholder{
+    color: #274427;
+}
+
+.SP :hover input{
+    width: 350px;
+}
+.SP:hover i{
+    transform: rotate(-360deg);
+
+}
+.filtro{
+    display: none;
+}
 .grid-container{
     /* aca empieza */
     .header{ grid-area: header; }
