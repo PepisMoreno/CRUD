@@ -7,6 +7,19 @@
 
     <title>Clasificador de Plantas</title>
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Nanum+Gothic&display=swap');
+   
+  
+            .h2consejos{
+            font-family: 'Julius Sans One', sans-serif;
+            font-size: 40px;
+            text-align: center;
+            margin: 5rem;
+            margin-right: 5rem;
+            padding-top: 6rem;}
+       
+</style>
 <body>
     <header class="header">
         <!--cambie el header -->
@@ -23,17 +36,14 @@
             </ul>
         </nav>
         </header>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br> 
-        <br>
-        <br>
-    <h1>Bienvenido al clasificador de Plantas!</h1>
-    <div id="output"></div>
+       
+    <h1 class="h2consejos">Bienvenido al clasificador de Plantas!</h1>
+   <p class="parrafo-tips"  id="output"></p>
+    
+    <br>
+    <br>
+    <br> 
+    <br>
 
     <script>
         function identificarPlanta() {
@@ -89,5 +99,12 @@
         // Llamar a la función para iniciar el proceso
         identificarPlanta();
     </script>
+      <footer class="footer"> <!--este es el footer-->
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <p class="footer"> &copy; Todos los derechos reservados 2023<br>
+            Programado por Josefina Moreno, Carina Rodrigues y Sofia Pizzamus</p>
+      </footer>
 </body>
 </html>
