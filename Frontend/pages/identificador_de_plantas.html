@@ -17,23 +17,27 @@
                 <li><a href="../index.html"><img src="../img/logo1.png" alt="LOGO"></a> </li>
         
             </div>
-      <nav>
-          <ul class="navegacion">
-              <li><a href="../index.html">Inicio</a></li>
-              <li><a href="formulario-de-contacto.html">Contacto</a></li>
-              <li><a href="nosotras.html">Nosotras</a></li>
-              <li><a href="tips.html">Tips comunidad</a></li>
-          </ul>
-      </nav></header>
+            <nav>
+                <ul class="navegacion">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/formulario-de-contacto.html">Contacto</a></li>
+                    <li><a href="pages/nosotras.html">Nosotras</a></li>
+                    <li><a href="pages/tips.html">Tips comunidad</a></li>
+                    <li><a href="pages/identificador_de_plantas.html">Identificador</a></li>
+                </ul>
+            </nav>
+        </header>
     </header>
     <main>
+        
         <div id="app" class="container">
             <h1>Plantas</h1>
             <br>
             <a  class="btn btn-primary" href="planta_nueva.html">Nuevo</a>
             <br><br>
+   
             <div v-if="error">
-                <p>Lo sentimos , ........</p>
+                <p>Lo sentimos , No hay nada que mostrar aquí.</p>
         </div>
         <div v-else>
             <section v-if="cargando">
@@ -57,7 +61,7 @@
                                 <td scope="row">{{planta.id}}</td>
                                 <td>{{planta.nombreComun}}</td>
                                 <td>{{planta.nombreCientif}}</td>
-                                <td><img width="60" :src="planta.imagen" :alt="planta.nombre">
+                                <td><img width="150" :src="planta.imagen" :alt="planta.nombre">
                                 </td>
                                 <td>
                                     <a class="btn btn-primary" :href="'planta_editar.html?id='+ planta.id">Editar</a>
