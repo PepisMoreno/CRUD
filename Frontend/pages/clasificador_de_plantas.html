@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="../img/favicon.ico">
+   
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <title>Clasificador de Plantas</title>
+</head>
+<body>
+    <header class="header">
+        <!--cambie el header -->
+        <div class="logo"><!--acá colocamos la img dentro de una etiqueta <a> para convertirla en un enlace -->
+            <a href="../index.html"><img src="../img/logo1.png" alt="LOGO"></a>
+        </div>
+        <nav>
+            <ul class="navegacion">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="formulario-de-contacto.html">Contacto</a></li>
+                <li><a href="nosotras.html">Nosotras</a></li>
+                <li><a href="tips.html">Tips comunidad</a></li>
+                <li><a href="identificador_de_plantas.html">Identificador</a></li>
+            </ul>
+        </nav>
+        </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> 
+        <br>
+        <br>
+    <h1>Bienvenido al clasificador de Plantas!</h1>
+    <div id="output"></div>
+
+    <script>
+        function identificarPlanta() {
+            var output = document.getElementById('output');
+            var respuesta1 = prompt("Empecemos por lo básico: ¿Es una planta? (si/no)").toLowerCase();
+
+            if (respuesta1 === "no") {
+                output.innerHTML = "Si no es una planta, te invitamos a buscar info en otro lado. Te esperamos cuando quieras!";
+                return;
+            } else if (respuesta1 === "si") {
+                output.innerHTML = "Es una planta, genial. De casualidad: ¿Tiene hojas, tallo y/o tronco, raíces...? (si/no)";
+                var respuesta2 = prompt("¿Tiene hojas, tallo y/o tronco, raíces...? (si/no)").toLowerCase();
+
+                if (respuesta2 === "no") {
+                    output.innerHTML = " Entonces, la familia de tu planta es la clase Briofita, por ejemplo un musgo. Estas plantas no son  vasculares, son prehistóricas!";
+                } else if (respuesta2 === "si") {
+                    output.innerHTML = "Entonces, la familia de tu planta es la clase Cormófita. La mayor familia de plantas sobre la tierra. Ahora bien, ¿Tiene semillas, flores y/o frutos? (si/no)";
+                    var respuesta3 = prompt("¿Tiene semillas, flores y/o frutos? (si/no)").toLowerCase();
+
+                    if (respuesta3 === "no") {
+                        output.innerHTML = "Claro, seguro es una pteridófita. Por ejemplo, un helecho. Si la planta no tiene fruto, flor ni semillas, se reproduce por otros medios, como esporas en sus hojas.";
+                    } else if (respuesta3 === "si") {
+                        output.innerHTML = "Es una planta espermatófita. Decime, ¿Tiene flores vistosas o frutos? (si/no)";
+                        var respuesta4 = prompt("¿Tiene flores vistosas o frutos? (si/no)").toLowerCase();
+
+                        if (respuesta4 === "no") {
+                            output.innerHTML = "Entonces debe ser una Gimnosperma, como por ejemplo los pinos, las gnetidos, el ginko y las cicas. Con semillas pero sin fruto ni flor vistosa. Las semillas están expuestas y su reproducción es unisexual.";
+                        } else if (respuesta4 === "si") {
+                            output.innerHTML = "Seguramente es una planta Angiosperma. Las semillas están recubiertas y es por lo general necesario que un insecto la polinice, moviendo el polen hacia el cáliz de la flor, donde están las semillas a fecundar.  Ahora bien: ¿Tiene pétalos múltiplos de 3 o de 4 y/o 5? (3/4-5)";
+                            var respuesta5 = prompt("¿Tiene pétalos múltiplos de 3 o de 4 y/o 5? (3/4-5)").toLowerCase();
+
+                            if (respuesta5 === "3") {
+                                output.innerHTML = "Clavado entonces que es una Monocotiledónea. Podría ser, por ejemplo, pasto, juncos, una orquídea, un árbol de plátano, una pita, un árbol de yuca, una planta de azucenas, un lilio, alguna bromelia...";
+                            } else if (respuesta5 === "4" || respuesta5 === "5") {
+                                output.innerHTML = "Dicotiledónea; incluyen, entre otras, a robles, encinas, los rosales, plantas de menta, habas, magnolias, crucíferas, almendros, margaritas...";
+                            } else {
+                                output.innerHTML = "Respuesta inválida.";
+                            }
+                        } else {
+                            output.innerHTML = "Respuesta inválida.";
+                        }
+                    } else {
+                        output.innerHTML = "Respuesta inválida.";
+                    }
+                } else {
+                    output.innerHTML = "Respuesta inválida.";
+                }
+            } else {
+                output.innerHTML = "Respuesta inválida.";
+            }
+        }
+
+        // Llamar a la función para iniciar el proceso
+        identificarPlanta();
+    </script>
+</body>
+</html>
