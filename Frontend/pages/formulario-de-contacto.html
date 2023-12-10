@@ -8,6 +8,8 @@
         <title>RePlantear</title>
 
         <link rel="stylesheet" href="../css/styles.css">
+        
+        
 
     </head>
 <style>
@@ -48,7 +50,7 @@
                    <div class="formulario">
                 <h2 class="h2consejos">Formulario de Contacto</h2>
                 <div>                   
-                        <form action="sofiapizzamus@gmail.com">
+                        <form name="Form" action="mensaje.html" onsubmit="return validar (nombre, email)" method="" id="formulario" >
                             <div class="row">
                                 <div class="col-25">  
                                     <label for="inputNombre">Nombre:</label>
@@ -56,28 +58,28 @@
                                 </div>
 
                                 <div class="col-75">
-                                    <input type="text" id="inputNombre" required>
+                                    <input type="text" name="nombre" id="nombre" required>
                                 </div>
                                     <br>
                             </div>
 
                             <div class="row">  
                                 <div class="col-25">
-                                    <label for="inputApellido">Apellido:</label>
+                                    <label for="apellido">Apellido:</label>
                                     <br>
                                 </div> 
                                 <div class="col-75">
-                                    <input type="text" id="inputApellido" required>
+                                    <input type="text" name="apellido" id="apellido" required>
                                     <br>
                                 </div>
                             </div>
                             <div class="row">  
                                 <div class="col-25">
-                                    <label for="inputMail">Correo electrónico:</label>
+                                    <label for="email">Correo electrónico:</label>
                                     <br>
                                 </div> 
                                 <div class="col-75">
-                                    <input type="text" id="inputMail" required>
+                                    <input type="text" name="email" id="email" required>
                                     <br>
                                 </div>
                             </div>
@@ -85,22 +87,23 @@
                             <div class="row">
                                 
                                  <div class="col-25">
-                                    <label for="textAreaMensaje">Escribe tu mensaje aquí</label>
+                                    <label for="mensaje">Escribe tu mensaje aquí</label>
                                     <br>
                                 </div>
                                 <div class="col-75">
-                                    <textarea name="textAreaMensaje" id="" cols="30" rows="10"></textarea>
+                                    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
                                     <br>
                                 </div>
                                 <div class="row">
-                                    <input type="submit" value="Enviar comentarios.." required>
+                                    <input type="submit" name="enviar" id="enviar" value="enviar comentarios.." required>
                                     <input type="reset" value="Borrar todo..">
                                 </div>
                                 </form>
                     </div>
                    
                 </div>                    
-    </main>
+                <script src="../js/tips.js"></script>
+            </main>
 
     <section id="consejo">
         <h2 class="h2consejos"> Algunos consejos para ti...</h2>
