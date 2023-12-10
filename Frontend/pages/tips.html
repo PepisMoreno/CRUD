@@ -58,7 +58,7 @@
             
             <div class="formulario">
                 <div>                   
-                        <form action="sofiapizzamus@gmail.com">
+                        <form name="Form" action="mensaje.html" onsubmit="return validar (nombre)" method="" id="formulario">
                             <div class="row">
                                 <div class="col-25">  
                                     <label for="inputNombre">Nombre:</label>
@@ -66,18 +66,18 @@
                                 </div>
 
                                 <div class="col-75">
-                                    <input type="text" id="inputNombre">
+                                    <input type="text" name="nombre" id="inputNombre">
                                 </div>
                                     <br>
                             </div>
 
                             <div class="row">  
                                 <div class="col-25">
-                                    <label for="inputApellido">Apellido:</label>
+                                    <label for="apellido">Apellido:</label>
                                     <br>
                                 </div> 
                                 <div class="col-75">
-                                    <input type="text" id="inputApellido">
+                                    <input type="text" name="apellido" id="apellido" required>
                                     <br>
                                 </div>
                             </div>
@@ -85,21 +85,22 @@
                             <div class="row">
                                 
                                  <div class="col-25">
-                                    <label for="textAreaMensaje">Contanos cuál es tu tip</label>
+                                    <label for="mensaje">Contanos cuál es tu tip</label>
                                     <br>
                                 </div>
                                 <div class="col-75">
-                                    <textarea name="textAreaMensaje" id="" cols="30" rows="10"></textarea>
+                                    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
                                     <br>
                                 </div>
                                 <div class="row">
-                                    <input type="submit" value="Enviar comentarios..">
+                                    <input type="submit" name="enviar" id="enviar" value="enviar comentarios.." required>
                                     <input type="reset" value="Borrar todo..">
                                 </div>
                                 </form>
                     </div>
                    
                 </div>
+                <script src="../js/tips.js"></script>
             </main>
           
               <div>
