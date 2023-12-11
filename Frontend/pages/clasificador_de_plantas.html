@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="shortcut icon" href="../img/favicon.ico">
-   
+    <script src="js/menu.js"></script>
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
@@ -30,15 +30,18 @@
         <div class="logo"><!--acá colocamos la img dentro de una etiqueta <a> para convertirla en un enlace -->
             <a href="../index.html"><img src="../img/logo1.png" alt="LOGO"></a>
         </div>
-        <nav>
-            <ul class="navegacion">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="formulario-de-contacto.html">Contacto</a></li>
-                <li><a href="nosotras.html">Nosotras</a></li>
-                <li><a href="tips.html">Tips comunidad</a></li>
-                <li><a href="identificador_de_plantas.html">Identificador</a></li>
-            </ul>
-        </nav>
+        <button id="abrir" class="abrir-menu" > <i class="bi bi-list"></i> </button>
+      
+      <nav class="nav" id="nav">
+        <button id="cerrar" class="cerrar-menu" ><i class="bi bi-x"></i></button>
+          <ul class="navegacion">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="pages/formulario-de-contacto.html">Contacto</a></li>
+              <li><a href="pages/nosotras.html">Nosotras</a></li>
+              <li><a href="pages/tips.html">Tips comunidad</a></li>
+              <li><a href="pages/identificador_de_plantas.html">Identificador</a></li>
+          </ul>
+      </nav>
         </header>
        
     <h1 class="h2consejos">Bienvenido al clasificador de Plantas!</h1>
@@ -65,7 +68,7 @@
                 var respuesta2 = prompt("¿Tiene hojas, tallo y/o tronco, raíces...? (si/no)").toLowerCase();
 
                 if (respuesta2 === "no") {
-                    output.innerHTML = " Entonces, la familia de tu planta es la clase Briofita, por ejemplo un musgo. Estas plantas no son  vasculares, son prehistóricas!";
+                    output.innerHTML = " Entonces, la familia de tu planta es la clase Briofita, por ejemplo un musgo. Estas plantas no son vasculares, son super simples pero porque son prehistóricas! Así que mucho respeto con tu Briofi.";
                 } else if (respuesta2 === "si") {
                     output.innerHTML = "Entonces, la familia de tu planta es la clase Cormófita. La mayor familia de plantas sobre la tierra. Ahora bien, ¿Tiene semillas, flores y/o frutos? (si/no)";
                     var respuesta3 = prompt("¿Tiene semillas, flores y/o frutos? (si/no)").toLowerCase();
