@@ -5,6 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="../css/styles.css">
+<script src="../js/menu.js"></script>
+<script src="../js/planta_editar.js"></script>
 <script src="https://kit.fontawesome.com/3b21fc997b.js" crossorigin="anonymous"></script>  
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Nanum+Gothic&display=swap');
@@ -21,15 +23,25 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         <div class="logo"><!--acá colocamos la img dentro de una etiqueta <a> para convertirla en un enlace -->
             <a href="../index.html"><img style=" float: left; width: auto; height: 50px; transition: all 0.3s; " src="../img/logo1.png" alt="LOGO"></a>
         </div>
-        <nav>
-            <ul class="navegacion">
+        <button id="abrir" class="abrir-menu" > <i class="bi bi-list"></i> </button>
+      
+      <nav class="nav" id="nav">
+        <button id="cerrar" class="cerrar-menu" ><i class="bi bi-x"></i></button>
+            
+          <ul class="navegacion">
                 <li><a href="../index.html">Inicio</a></li>
+              
                 <li><a href="formulario-de-contacto.html">Contacto</a></li>
+              
                 <li><a href="nosotras.html">Nosotras</a></li>
+              
                 <li><a href="tips.html">Tips comunidad</a></li>
                 <li><a href="identificador_de_plantas.html">Identificador</a></li>
+              
             </ul>
+          
         </nav>
+      
     </header>
 <main>
     <br>
