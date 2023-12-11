@@ -74,21 +74,24 @@
                     var respuesta3 = prompt("¿Tiene semillas, flores y/o frutos? (si/no)").toLowerCase();
 
                     if (respuesta3 === "no") {
-                        output.innerHTML = "Claro, seguro es una pteridófita. Por ejemplo, un helecho. Si la planta no tiene fruto, flor ni semillas, se reproduce por otros medios, como esporas en sus hojas.";
+                        output.innerHTML = "Claro, entonces seguro es una pteridófita. Por ejemplo, un helecho. Si la planta no tiene fruto, flor ni semillas, se reproduce por otros medios, como esporas en sus hojas.Las pteridofitas son un grupo de plantas de gran importancia en la vida de los seres humanos desde hace unos 400 millones de años.Crecen en climas tropicales a templados, húmedos y hasta áridos.";
                     } else if (respuesta3 === "si") {
                         output.innerHTML = "Es una planta espermatófita. Decime, ¿Tiene flores vistosas o frutos? (si/no)";
                         var respuesta4 = prompt("¿Tiene flores vistosas o frutos? (si/no)").toLowerCase();
 
                         if (respuesta4 === "no") {
-                            output.innerHTML = "Entonces debe ser una Gimnosperma, como por ejemplo los pinos, las gnetidos, el ginko y las cicas. Con semillas pero sin fruto ni flor vistosa. Las semillas están expuestas y su reproducción es unisexual.";
+                            output.innerHTML = "Entonces debe ser una planta Gimnosperma, como por ejemplo los pinos, las gnetidos, el ginko y las cicas. Con semillas pero sin fruto ni flor vistosa. Las semillas están expuestas y su reproducción es unisexual. En griego, gymnos es desnudo y sperma es semilla, por tanto, sus semillas están desnudas.Las gimnospermas pueden crecer en todas las zonas del mundo, pero sobre todo en climas fríos y árticos.";
+
+
                         } else if (respuesta4 === "si") {
                             output.innerHTML = "Seguramente es una planta Angiosperma. Las semillas están recubiertas y es por lo general necesario que un insecto la polinice, moviendo el polen hacia el cáliz de la flor, donde están las semillas a fecundar.  Ahora bien: ¿Tiene pétalos múltiplos de 3 o de 4 y/o 5? (3/4-5)";
                             var respuesta5 = prompt("¿Tiene pétalos múltiplos de 3 o de 4 y/o 5? (3/4-5)").toLowerCase();
 
                             if (respuesta5 === "3") {
-                                output.innerHTML = "Clavado entonces que es una Monocotiledónea. Podría ser, por ejemplo, pasto, juncos, una orquídea, un árbol de plátano, una pita, un árbol de yuca, una planta de azucenas, un lilio, alguna bromelia...";
+                                output.innerHTML = "Clavado entonces que es una Monocotiledónea. Por ejemplo:pasto, juncos, orquídeas,un bananero, un árbol de yuca,azucenas, un lilio, alguna bromelia..No tienen cámbium, por lo que no pueden producir verdadera  madera y por eso no desarrollan tronco como tal, sino un tallo principal y más grueso. Por ejemplo, si cortas el “tronco” de una palmera, no verás anillos anuales de crecimiento como ocurre en los arbustos y árboles";
+
                             } else if (respuesta5 === "4" || respuesta5 === "5") {
-                                output.innerHTML = "Dicotiledónea; incluyen, entre otras, a robles, encinas, los rosales, plantas de menta, habas, magnolias, crucíferas, almendros, margaritas...";
+                                output.innerHTML = "Dicotiledónea; incluyen, entre otras, a robles, encinas, los rosales, plantas de menta, habas, magnolias, crucíferas, almendros, margaritas...Las familias de mayor importancia son las Fabaceae (leguminosas), Lamiaceae (menta, lavanda, orégano, romero), Rosaceae (rosa, mora), Cucurbitaceae (calabaza o auyama, melón, pepino) y Cactaceae (cactus).";
                             } else {
                                 output.innerHTML = "Respuesta inválida.";
                             }
