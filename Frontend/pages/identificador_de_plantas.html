@@ -1,60 +1,63 @@
 <!doctype html>
 <html lang="en">
 <head>
+ <link rel="stylesheet" href="../css/styles.css">
 <script src="https://kit.fontawesome.com/3b21fc997b.js" crossorigin="anonymous"></script>    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Nanum+Gothic&display=swap');
+  </style>
 <title>Identificador de Plantas</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="../css/styles.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://raw.githubusercontent.com/PepisMoreno/CRUD/main/Frontend/img/favicon.ico">
+<link rel="shortcut icon" href="./img/favicon.ico">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" /> <!--datatable-->
 </head>
 <body>
- <!--   <header id="header">-->        
-    <header class="header">
-            <div class="logo"> <!--acá colocamos la img dentro de una etiqueta <a> para convertirla en un enlace -->
+    
+        <header class="header">
+            <div class="logo"><!--acá colocamos la img dentro de una etiqueta <a> para convertirla en un enlace -->
         
-                <li><a href="../index.html"><img src="../img/logo1.png" alt="LOGO"></a> </li>
+                <li><a href="index.html"><img src="../img/logo1.png" alt="LOGO"></a> </li>
         
             </div>
-            <nav>
-                <ul class="navegacion">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="formulario-de-contacto.html">Contacto</a></li>
-                    <li><a href="nosotras.html">Nosotras</a></li>
-                    <li><a href="tips.html">Tips comunidad</a></li>
-                    <li><a href="identificador_de_plantas.html">Identificador</a></li>
-                </ul>
-            </nav>
-        </header>
+      <nav>
+          <ul class="navegacion">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="formulario-de-contacto.html">Contacto</a></li>
+              <li><a href="nosotras.html">Nosotras</a></li>
+              <li><a href="tips.html">Tips comunidad</a></li>
+          </ul>
+      </nav></header>
     </header>
     <main>
-        
-        <div id="app" class="container"  >
-            <h1>Plantas</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="app" class="container">
+            <h1 style="font-family: 'Julius Sans One', sans-serif;
+            font-size: 40px;
+            color: black;
+            text-align: center;
+            padding-top: 1em;">Identificador de Plantas</h1>
             <br>
-            <a  class="btn btn-secondary" href="planta_nueva.html">Agregar nueva planta</a>
+            <a  class="btn btn-primary" href="planta_nueva.html">Nuevo</a>
             <br><br>
-
             <div v-if="error">
-                <p>Lo sentimos , No hay nada que mostrar aquí.</p>
+                <p>Lo sentimos , no se pudo establecer una conexion</p>
         </div>
-       <!-- <div class="SP">
-            
-            <input type="text" placeholder="Buscar" id="buscador">
-            <div class="busco">
-                    <i class="fa fa-search"></i>
-            </div>
-        </div> -->
-
         <div v-else>
             <section v-if="cargando">
                  <div class="spinner-border"></div>
                  <p>Cargando .....</p>
             </section>
              <section v-else>
-                <div class="table-responsive" >
-                    <table class="table table-bordered">
+                <div class="table-responsive">
+                    <table id="tablaplantas" class="table table-bordered">
                         <thead>
                             <tr>
                                 <th scope="col">Id</th>
@@ -67,12 +70,12 @@
                         <tbody>
                             <tr class=""  v-for="planta in plantas">
                                 <td scope="row">{{planta.id}}</td>
-                                <td >{{planta.nombreComun}}</td>
+                                <td id="codigo">{{planta.nombreComun}}</td>
                                 <td>{{planta.nombreCientif}}</td>
-                                <td><img width="150" :src="planta.imagen" :alt="planta.nombre">
+                                <td><img width="100" :src="planta.imagen" :alt="planta.nombre">
                                 </td>
                                 <td>
-                                    <a class="btn btn-success" :href="'planta_editar.html?id='+ planta.id">Editar</a>
+                                    <a class="btn btn-primary" :href="'planta_editar.html?id='+ planta.id">Editar</a>
                                     <button type="button" class="btn btn-danger" v-on:click="eliminar(planta.id)">Eliminar</button>
                                 </td>
                             </tr>
@@ -97,8 +100,32 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     <script src="../js/main.js"></script>
-    <script src="../js/buscador.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
     <script src="../js/identificador_de_plantas.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--para datatable-->
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script><!--para datatable-->
+
 </body>
+<script>
+    $(document).ready( function () {
+        $('#tablaplantas').DataTable({
+            'bPaginate':true,
+            "language": {
+                "lengthMenu": "Mostrar _MENU_ registros por página",
+                "zeroRecords": "Nada encontrado",
+                "info": "Mostrando la página _PAGE_ de _PAGES_",
+                "infoEmpty": "No records available",
+                "infoFiltered": "(filtrado de _MAX_ registros totales)",
+                "search": "Buscar",
+                "paginate": {
+                    "next":"Siguiente",
+                    "previous": "Anterior",
+                }
+        },
+        });
+    } );
+    
+    
+    </script>
+    
 </html>
