@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
     <header class="header">
        
         <div class="logo"><!--acá colocamos la img dentro de una etiqueta <a> para convertirla en un enlace -->
@@ -29,9 +30,10 @@
             <button id="cerrar" class="cerrar-menu" ><i class="bi bi-x"></i></button>
             <ul class="navegacion">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/formulario-de-contacto.html">Contacto</a></li>
-                <li><a href="../pages/nosotras.html">Nosotras</a></li>
-                <li><a href="../pages/tips.html">Tips comunidad</a></li>
+                <li><a href="formulario-de-contacto.html">Contacto</a></li>
+                <li><a href="nosotras.html">Nosotras</a></li>
+                <li><a href="tips.html">Tips comunidad</a></li>
+                <li><a href="identificador_de_plantas.html">Identificador</a></li>
             </ul>
         </nav>
     </header>
@@ -51,9 +53,10 @@
        
        
         <br>
-        
-        <a class="btn btn-primary" href="planta_nueva.html">Agregar una nueva planta</a>
-        <br><br>
+          <tr><a  class="btn btn-secondary" href="planta_nueva.html">Agregar nueva planta</a></tr>
+            
+            &nbsp;&nbsp; <a  class="btn btn-secondary" href="clasificador_de_plantas.html">clasificador de plantas</a>
+            </tr><br><br>
         <section v-if="error">No se pudo establecer una conexión</section>
             <section v-else>
                 <section v-if="cargando">
@@ -111,10 +114,10 @@ crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
 integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
 crossorigin="anonymous"></script>
-    <script src="../JS/main.js"></script>
+    <script src="../js/main.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
-    <script src="../JS/plantas.js"></script>
-    <script src="../JS/menu.js"></script>
+    <script src="../js/identificador_de_plantas.js"></script>
+    <script src="../js/menu.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--para datatable-->
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script><!--para datatable-->
 </body>

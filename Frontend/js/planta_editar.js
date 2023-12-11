@@ -36,7 +36,7 @@ function modificar() {
         .then(function () {
             console.log("modificado")
             alert("Registro modificado")
-            window.location.href = "./Identificador_de_plantas.html";  
+            window.location.href = "./identificador_de_plantas.html";  
         //NUEVO,  si les da error el fetch  comentar esta linea que puede dar error  
         })
         .catch(err => {
