@@ -10,7 +10,19 @@
         <link rel="stylesheet" href="../css/styles.css">
         <script src="https://kit.fontawesome.com/3b21fc997b.js" crossorigin="anonymous"></script>  
        <!-- <script src="../JS/index.js"> </script>-->
-
+        <style>
+                @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Nanum+Gothic&display=swap');
+              
+              
+                        .h2consejos{
+                        font-family: 'Julius Sans One', sans-serif;
+                        font-size: 40px;
+                        text-align: center;
+                        margin: 5rem;
+                        margin-right: 5rem;
+                        padding-top: 6rem;}
+                  
+        </style>
     </head>
 
   <header class="header">
@@ -32,63 +44,109 @@
     </header>
     <body>
     <main>
+        <div class="inicio"></div>
         <div  class="inicio"> </div>   
+            <div class="formulario">
                    <div class="formulario">
                 <h2 class="h2consejos">Formulario de Contacto</h2>
+                <h2 class="h2consejos">Formulario de Contacto</h2>
                 <p class="parrafo-tips">¿Tenés alguna duda? Dejanos tus datos y nos comunicamos con vos!</p>
-                <div>                   
+                <div>                  
+                <div>                  
+                        <form name="Form" action="mensaje.html" onsubmit="return validar (nombre, email)" method="" id="formulario" >
                         <form action="">
                             <div class="row">
+                            <div class="row">
                                 <div class="col-25">  
+                                <div class="col-25">  
+                                    <label for="inputNombre">Nombre:</label>
                                     <label for="inputNombre" class="parrafo-tips">Nombre:</label>
                                     <br>
+                                    <br>
                                 </div>
-
+                                </div>
                                 <div class="col-75">
+                                <div class="col-75">
+                                    <input type="text" name="nombre" id="nombre" required>
                                     <input type="text" id="inputNombre" required>
                                 </div>
+                                </div>
+                                    <br>
                                     <br>
                             </div>
-
+                            </div>
+                            <div class="row">  
                             <div class="row">  
                                 <div class="col-25">
+                                <div class="col-25">
+                                    <label for="apellido">Apellido:</label>
                                     <label for="inputApellido" class="parrafo-tips">Apellido:</label>
                                     <br>
-                                </div> 
+                                    <br>
+                                </div>
+                                </div>
                                 <div class="col-75">
+                                <div class="col-75">
+                                    <input type="text" name="apellido" id="apellido" required>
                                     <input type="text" id="inputApellido" required>
                                     <br>
+                                    <br>
                                 </div>
+                                </div>
+                            </div>
                             </div>
                             <div class="row">  
+                            <div class="row">  
                                 <div class="col-25">
+                                <div class="col-25">
+                                    <label for="email">Correo electrónico:</label>
                                     <label for="inputMail" class="parrafo-tips">Correo electrónico:</label>
                                     <br>
-                                </div> 
+                                    <br>
+                                </div>
+                                </div>
                                 <div class="col-75">
+                                <div class="col-75">
+                                    <input type="text" name="email" id="email" required>
                                     <input type="text" id="inputMail" required>
                                     <br>
+                                    <br>
+                                </div>
                                 </div>
                             </div>
-
+                            </div>
+                            <div class="row">
                             <div class="row">
                                 
+                                
                                  <div class="col-25">
+                                 <div class="col-25">
+                                    <label for="mensaje">Escribe tu mensaje aquí</label>
                                     <label for="textAreaMensaje" class="parrafo-tips">Escribe tu mensaje aquí</label>
                                     <br>
-                                </div>
-                                <div class="col-75">
-                                    <textarea name="textAreaMensaje" id="" cols="30" rows="10"></textarea>
                                     <br>
                                 </div>
+                                </div>
+                                <div class="col-75">
+                                <div class="col-75">
+                                    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                                    <textarea name="textAreaMensaje" id="" cols="30" rows="10"></textarea>
+                                    <br>
+                                    <br>
+                                </div>
+                                </div>
                                 <div class="row">
+                                <div class="row">
+                                    <input type="submit" name="enviar" id="enviar" value="enviar comentarios.." required>
                                     <input type="submit" value="Enviar comentarios.." required>
                                     <input type="reset" value="Borrar todo..">
+                                    <input type="reset" value="Borrar todo..">
+                                </div>
                                 </div>
                                 </form>
+                                </form>
                     </div>
-                   
-                </div>                    
+    <script src="../js/tips.js"></script>                                  
     </main>
     <div  class="inicio"> </div>   
   
