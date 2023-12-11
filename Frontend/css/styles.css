@@ -674,6 +674,8 @@ color: white;
                         padding: 12px 12px 12px 0;
                         display: inline-block;
                         font-family: 'Montserrat', sans-serif;
+			min-width: 10px;
+			
                     }
 
                     input[type=submit] {
