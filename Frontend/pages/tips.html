@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -5,42 +6,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>RePlantear</title>
-
+        <title>Tips</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="../css/styles.css">
+        <script src="https://kit.fontawesome.com/3b21fc997b.js" crossorigin="anonymous"></script>  
 
+        <!--<link rel="stylesheet" href="../JS/index.js">-->
 
-           <script src="https://kit.fontawesome.com/3b21fc997b.js" crossorigin="anonymous"></script>
-
-
-        
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+                   
     </head>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Nanum+Gothic&display=swap');
-        
-            * {box-sizing: border-box; }
-
-             .h2consejos{
-                font-family: 'Julius Sans One', sans-serif;
-                font-size: 40px;
-                text-align: center;
-                margin: 5rem;
-                margin-right: 5rem;
-                padding-top: 6rem; 
-                }
-                       
-         </style>
-        
-
-
     <header class="header">
-            <!--cambie el header -->
-        <div class="logo"><!--acá colocamos la img dentro de una etiqueta <a> para convertirla en un enlace -->
+
+        <div class="logo">
                 <li><a href="../index.html"><img src="../img/logo1.png" alt="LOGO"></a> </li>
         </div>
-        <nav>
-            <ul class="navegacion">
+        <button id="abrir" class="abrir-menu" > <i class="bi bi-list"></i> </button>
+        <nav class="nav" id="nav">
+            <button id="cerrar" class="cerrar-menu" ><i class="bi bi-x"></i></button>
+             <ul class="navegacion">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="formulario-de-contacto.html">Contacto</a></li>
                 <li><a href="nosotras.html">Nosotras</a></li>
@@ -52,33 +37,34 @@
 
 
     <body>  
-        <main>    
-            <div class="inicio"></div>      
+        
+        <main> 
+            <div  class="inicio"> </div>         
                 <h2 class="h2consejos">Compartinos tu tip para aprender juntos!</h2>
                 <p class="parrafo-tips">Dejanos tu comentario aquí para compartir a la comunidad todos esos tips que te siriveron para tu jardín o balcón!</p>
             
             <div class="formulario">
                 <div>                   
-                        <form name="Form" action="mensaje.html" onsubmit="return validar (nombre)" method="" id="formulario">
+                        <form action="">
                             <div class="row">
                                 <div class="col-25">  
-                                    <label for="inputNombre">Nombre:</label>
+                                    <label for="inputNombre" class="parrafo-tips">Nombre:</label>
                                     <br>
                                 </div>
 
                                 <div class="col-75">
-                                    <input type="text" name="nombre" id="inputNombre">
+                                    <input type="text" id="inputNombre" required>
                                 </div>
                                     <br>
                             </div>
 
                             <div class="row">  
                                 <div class="col-25">
-                                    <label for="apellido">Apellido:</label>
+                                    <label for="inputApellido" class="parrafo-tips">Apellido:</label>
                                     <br>
                                 </div> 
                                 <div class="col-75">
-                                    <input type="text" name="apellido" id="apellido" required>
+                                    <input type="text" id="inputApellido" required>
                                     <br>
                                 </div>
                             </div>
@@ -86,119 +72,95 @@
                             <div class="row">
                                 
                                  <div class="col-25">
-                                    <label for="mensaje">Contanos cuál es tu tip</label>
+                                    <label for="textAreaMensaje" class="parrafo-tips">Contanos cuál es tu tip</label>
                                     <br>
                                 </div>
                                 <div class="col-75">
-                                    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                                    <textarea name="textAreaMensaje" id="" cols="30" rows="10" required></textarea>
                                     <br>
                                 </div>
                                 <div class="row">
-                                    <input type="submit" name="enviar" id="enviar" value="enviar comentarios.." required>
+                                    <input type="submit" value="Enviar comentarios..">
                                     <input type="reset" value="Borrar todo..">
                                 </div>
                                 </form>
                     </div>
-                   
                 </div>
-                <script src="../js/tips.js"></script>
+                
             </main>
-            <div class="inicio"></div>
-          
+            <div  class="inicio"> </div>
+
               <div>
                   <h2 class="h2consejos">Ustedes</h2>
-            
             <div class="gallery">
                     <div class="responsive">
                             <div class="gallery">
-                            <a target="_blank" href="../img/1.jpg">
                                 <img src="../img/1.jpg" alt="DiegoTandil" width="600" height="400">
-                            </a>
                             </div>
                     </div>
                 
                     <div class="responsive">
                             <div class="gallery">
-                                <a target="_blank" href="../img/2.jpg">
                                     <img src="../img/2.jpg" alt="ElenaCordoba" width="600" height="400">
-                                </a>
                             </div>
                     </div>
                     
                         <div class="responsive"> 
                         <div class="gallery">
-                        <a target="_blank" href="../img/3.jpg">
                             <img src="../img/3.jpg" alt="JazminOlavarria" width="600" height="400">
-                        </a>
                         </div>
                         </div>
                         
                         <div class="responsive">
                         <div class="gallery">
-                        <a target="_blank" href="../img/4.jpg">
                             <img src="../img/4.jpg" alt="JuanUshuahia" width="600" height="400">
-                        </a>
                         </div>
                         </div>
                         
                         <div class="responsive">
                         <div class="gallery">
-                            <a target="_blank" href="../img/5.jpg">
                             <img src="../img/5.jpg" alt="LuisBurzaco" width="600" height="400">
-                            </a>
                         </div>
                         </div>
 
                         <div class="responsive">
                         <div class="gallery">
-                            <a target="_blank" href="../img/6.jpg">
                             <img src="../img/6.jpg" alt="Isabel - La Plata" width="600" height="400">
-                            </a>
                         </div>
                         </div>
 
                         <div class="responsive">
                         <div class="gallery">
-                            <a target="_blank" href="../img/7.jpg">
                             <img src="../img/7.jpg" alt="JavierTilcara" width="600" height="400">
-                            </a>
                         </div>
                         </div>
 
                         <div class="responsive">
                         <div class="gallery">
-                            <a target="_blank" href="../img/8.jpg">
                             <img src="../img/8.jpg" alt="SabrinaLaPampa" width="600" height="400">
-                            </a>
                             </div>
                         </div>
                     
 
                     <div class="responsive">
                         <div class="gallery">
-                            <a target="_blank" href="../img/9.jpg">
-                                <img src="../img/9.jpg" alt="CintiaCaba" width="600" height="400">
-                            </a>
+                            <img src="../img/9.jpg" alt="CintiaCaba" width="600" height="400">
                         </div>
                     </div>
-            </div>      
+                     
+            </div>    
+             
         </div>
-
-        <div class="flex">
-            <p><a href="../index.html">Volver...</a></p>
-        </div>
-
-
-
-        <footer class="footer"> <!--este es el footer-->
+       
+        <footer class="footer">
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-whatsapp"></i>
-            <p class="footer"> &copy; Todos los derechos reservados 2023<br>
+            <p class="footer">&copy; Todos los derechos reservados 2023<br>
                 Programado por Josefina Moreno, Carina Rodrigues y Sofia Pizzamus</p>
-      </footer>
-
+            
+        </footer>
+        <script src="../js/menu.js"></script>
     </body>
 
 </html>    
-
