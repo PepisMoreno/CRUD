@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Identificador de plantas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <script src="https://kit.fontawesome.com/3b21fc997b.js" crossorigin="anonymous"></script>  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Nanum+Gothic&display=swap');
+  </style>
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" /> <!--datatable-->
+</head>
+
+<body>
+    <header class="header">
+       
+        <div class="logo"><!--acá colocamos la img dentro de una etiqueta <a> para convertirla en un enlace -->
+            <a href="../index.html"><img style=" float: left; width: auto; height: 50px; transition: all 0.3s; " src="../img/logo1.png" alt="LOGO"></a>
+        </div>
+        <button id="abrir" class="abrir-menu" > <i class="bi bi-list"></i> </button>
+        <nav class="nav" id="nav">
+            <button id="cerrar" class="cerrar-menu" ><i class="bi bi-x"></i></button>
+            <ul class="navegacion">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/formulario-de-contacto.html">Contacto</a></li>
+                <li><a href="../pages/nosotras.html">Nosotras</a></li>
+                <li><a href="../pages/tips.html">Tips comunidad</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="app" class="container">
+        <h1 style="font-family: 'Julius Sans One', sans-serif;
+        font-size: 40px;
+        color: black;
+        text-align: center;
+        padding-top: 1em;">Clasificación de Plantas</h1>
+       
+       
+        <br>
+        
+        <a class="btn btn-primary" href="planta_nueva.html">Agregar una nueva planta</a>
+        <br><br>
+        <section v-if="error">No se pudo establecer una conexión</section>
+            <section v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando ...</p>
+
+                </section>
+                <section v-else>
+                    <div class="table-responsive">
+                        <table id="tablaplantas" class="table table-bordered">
+                            <thead>
+                               <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nombre Común</th>
+                                    <th scope="col">Nombre Científico</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Acciones</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                               <tr class="" v-for="planta in plantas">
+                                    <td scope="row">{{planta.id}}</td>
+                                    <td id="codigo">{{planta.nombreComun}}</td>
+                                    <td>{{planta.nombreCientif}}</td>
+                                    <td>
+                                    
+                                       <img width="60" :src="planta.imagen" :alt="planta.nombre">
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" :href="'planta_editar.html?id='+ planta.id+'&nombreComun='+planta.nombreComun+'&nombreCientif='+planta.nombreCientif+'&imagen='+planta.imagen" >Editar</a> <!--acá editar-->
+                                       <button type="button" class="btn btn-danger" v-on:click="eliminar(planta.id)" >Eliminar</button> <!--acá tenía un error en (planta.id) antes tenía plantas en plural-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+   
+    <footer class="footer">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-whatsapp"></i>
+    <p class="footer">&copy; Todos los derechos reservados 2023<br>
+        Programado por Josefina Moreno, Carina Rodrigues y Sofia Pizzamus</p>
+    
+</footer>
+<script
+    
+src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+crossorigin="anonymous"></script>
+    <script src="../JS/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="../JS/plantas.js"></script>
+    <script src="../JS/menu.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--para datatable-->
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script><!--para datatable-->
+</body>
+<script>
+$(document).ready( function () {
+    $('#tablaplantas').DataTable({
+        'bPaginate':true,
+        "language": {
+            "lengthMenu": "Mostrar _MENU_ registros por página",
+            "zeroRecords": "Nada encontrado",
+            "info": "Mostrando la página _PAGE_ de _PAGES_",
+            "infoEmpty": "No records available",
+            "infoFiltered": "(filtrado de _MAX_ registros totales)",
+            "search": "Buscar",
+            "paginate": {
+                "next":"Siguiente",
+                "previous": "Anterior",
+            }
+    },
+    });
+} );
+
+
+</script>
+</html>
